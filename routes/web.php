@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +18,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/user/{id}', function () {
-    return view('user');
-});
+Route::get('/user/{id}', [UserController::class, 'show']);
