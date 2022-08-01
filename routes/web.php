@@ -18,4 +18,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('/update-user', function () {
+    return view('update-user');
+});
+
+
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user-details');

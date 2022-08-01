@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>User Card - {{ $user->name }}</title>
+    <title>404</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     @vite(['resources/sass/main.scss', 'resources/css/noscript.css', 'resources/js/app.js'])
@@ -9,11 +9,7 @@
 <body class="is-preload">
 <div id="wrapper">
     <section id="main">
-        <header>
-            <span class="avatar"><img src="{{asset('/images/users/'.[1,2][array_rand([1,2], 1)].'.jpg')}}" alt="" /></span>
-            <h1>{{ $user->name }}</h1>
-            <p>{!! $user->comments !!}</p>
-        </header>
+        <h1>{{ $message }}</h1>
     </section>
     <footer id="footer">
         <ul class="copyright">
