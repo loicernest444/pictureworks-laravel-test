@@ -95,10 +95,11 @@ class UserController extends Controller
         $user->updateOrFail([
             'comments' => $user->comments != '' ? $user->comments . '\n' . $validator->validated()['comments'] : $validator->validated()['comments']
         ]);
-
-        return $this->success($user, "User comments updated sucessfully!");
-
-        // return Redirect::route('user-details', ['id' => $validator->validated()['id']]);
+        
+        
+        if($request->header('content-type') == "application/json")
+            return $this->success($user, "User comments updated sucessfully!");
+        else return Redirect::route('user-details', ['id' => $validator->validated()['id']]);
     }
 
     /**
