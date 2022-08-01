@@ -45,7 +45,7 @@ class UpdateUserComments extends Command
         if($validator->fails()){
             $this->error('Something went wrong!');
             print_r($validator->errors());
-            return 0;
+            return 1;
         }
 
         $user = User::find($validator->validated()['id']);
