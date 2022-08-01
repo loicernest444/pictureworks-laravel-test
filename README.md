@@ -21,6 +21,9 @@ To deploy the project, run commands below in the project root directory
 $ composer install
 ```
 ```bash
+$ npm install
+```
+```bash
 $ cp .env.example .env
 ```
 ```php
@@ -34,6 +37,9 @@ $ php artisan db:seed
 ```
 ```php
 $ php artisan serve
+```
+```php
+$ npm run dev
 ```
 
 ```php artisan db:seed``` command has seed your database with 10 users
